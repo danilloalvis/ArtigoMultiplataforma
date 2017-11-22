@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyTask.Tasks" Title="Tarefas">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="myList" RowHeight="120" SeparatorVisibility="None" IsVisible="false">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout VerticalOptions="StartAndExpand" HeightRequest="100" Margin="16,4" Orientation="Vertical" BackgroundColor="#F2F2F2">
+                                <Label Text="{Binding titulo}" Font="Bold,20" HeightRequest="22" Margin="4,2" />
+                                <Label Text="{Binding inicio}" FontSize="18" HeightRequest="20" Margin="4,2"  />
+                                <Label Text="{Binding fim}" FontSize="18" HeightRequest="20" Margin="4,2,2,8" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        
+                    <ActivityIndicator Color="#4e8ef7" x:Name="progress" IsRunning="true" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
