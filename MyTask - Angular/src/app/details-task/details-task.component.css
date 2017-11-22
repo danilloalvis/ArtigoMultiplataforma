@@ -1,0 +1,49 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  img {
+    padding: 8px;
+    display: block;
+    max-width:100px;
+    max-height:100px;
+    width: auto;
+    height: auto;
+  }
+  
+  .bottom.mat-primary {
+    position: absolute;
+    width: 90%;
+    bottom: 16px;
+    left: 16px;
+    background-color: #3f51b5;
+  }
+  
+  input[type='file'] {
+  color: rgba(0, 0, 0, 0.00);
+  width: 0px;
+  font-size: 0px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+  

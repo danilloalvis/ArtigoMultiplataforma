@@ -1,0 +1,23 @@
+<div *ngIf="task" style="padding:16px;">
+
+  <h2>Titulo</h2>
+  <h3>{{task.title}}</h3>
+
+  <h2>Descrição</h2>
+  <h3>{{task.description}}</h3>
+
+  <h2>Data Inicial</h2>
+  <h3>{{task.start_date}}</h3>
+
+  <h2>Data Final</h2>
+  <h3>{{task.end_date}}</h3>
+
+
+
+  <img *ngIf="task.img" [src]='task.img' alt="" />
+
+  <a href='mailto:?subject=Task&body'>
+  <button class="bottom" md-raised-button color="primary">Compartilhar</button>
+  </a>
+
+</div>

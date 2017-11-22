@@ -1,0 +1,11 @@
+<a *ngFor="let item of tasks" (click)="goToProductDetails(item.id)">
+  <div>
+    <md-card class="item-card">
+      <md-card-title>{{item.title}}</md-card-title>
+      <md-card-subtitle>
+        <span>Inicio {{item.start_date}}</span><br/>
+        <span>Fim {{item.end_date}}</span>
+      </md-card-subtitle>
+    </md-card>
+  </div>
+</a>

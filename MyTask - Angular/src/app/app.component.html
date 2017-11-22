@@ -1,0 +1,33 @@
+<md-toolbar color="primary">
+  <div class="md-toolbar-tools">
+    <button class="md-icon-button" aria-label="Menu" md-button (click)="menuController()">
+        <i class="material-icons md-light">menu</i>
+    </button>
+  </div>
+  <span style="margin-left:16px;">{{title}}</span>
+</md-toolbar>
+
+<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav class="example-sidenav">
+    <a routerLink="/home">
+    <button class="button_menu" md-button   >
+    Tarefas
+    </button>
+    </a>
+
+    <a routerLink="/criar">
+    <button class="button_menu" md-button>
+     Nova Tarefas
+    </button>
+    </a>
+
+  </md-sidenav>
+
+
+  <div class="example-sidenav-content">
+
+    <router-outlet></router-outlet>
+
+  </div>
+
+</md-sidenav-container>

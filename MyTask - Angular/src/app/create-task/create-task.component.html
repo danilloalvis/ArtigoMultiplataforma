@@ -1,0 +1,37 @@
+<div style="padding:16px;">
+
+  <form novalidate [formGroup]="form" (ngSubmit)="onSubmit(form.valid, form.value)">
+    <md-form-field class="example-full-width">
+      <input formControlName="title" mdInput placeholder="Titulo">
+    </md-form-field>
+
+    <md-form-field class="example-full-width">
+      <input formControlName="description" mdInput placeholder="Descrição">
+    </md-form-field>
+
+    <md-form-field class="example-full-width">
+      <input formControlName="start_date" [textMask]="{mask: mask}" mdInput placeholder="Data Inicio">
+    </md-form-field>
+
+    <md-form-field class="example-full-width">
+      <input formControlName="end_date" [textMask]="{mask: mask}" mdInput placeholder="Data fim">
+    </md-form-field>
+
+    <img [src]='"data:image/jpeg;base64," + base64' alt="" />
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <button type="button" md-raised-button color="primary">
+            <span>Galeria</span>
+            <input type="file" md-raised-button id="anexo_featured" class="file__input" accept="image/*" (change)="fileChange($event)" #input>
+          </button>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
+
+    <button class="bottom" md-raised-button color="primary">Salvar</button>
+  </form>
+
+</div>
