@@ -1,9 +1,9 @@
 var Sequelize = require('sequelize');
 
-var sequelize = new Sequelize('mdta_data', 'dantorquato', 'zeus0581', {
-    host: 'mysql552.umbler.com',
-    port: 41890,
-    dialect: 'mysql'
+var sequelize = new Sequelize('banco', 'user', 'password', {
+    host: 'xxxx',
+    port: 000,
+    dialect: 'xxx'
 });
 
 var tasks = sequelize.define('tasks', {
