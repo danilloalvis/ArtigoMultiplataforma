@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyTask.CreateNewTask" Title="Nova Tarefa">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <ScrollView x:Name="body"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Height,Factor=.90,Constant=0}">
+                <StackLayout Orientation="Vertical" Padding="16">
+
+                    <Label Text="Titulo" FontSize="20" />
+                    <Entry x:Name="et_title" FontSize="18"/>    
+
+                    <Label Text="Descrição" FontSize="20" Margin="0,8,0,0"/>
+                    <Entry x:Name="et_descrition" FontSize="18"/>   
+
+                    <Label Text="Data Inicio" FontSize="20" Margin="0,8,0,0"/>
+                    <DatePicker x:Name="dateInicio"/>
+
+                    <Label Text="Data Fim" FontSize="20" Margin="0,8,0,0"/>
+                    <DatePicker x:Name="dateFim"/>
+
+                        <Label Text="Imagem" FontSize="20" Margin="0,8,0,0" />
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Capturar" Margin="0,8,0,0" WidthRequest="100" x:Name="capture" TextColor="White" BackgroundColor="#4e8ef7"/>
+                        <Button Text="Procurar" Margin="10,8,0,0" WidthRequest="100" x:Name="procurar" TextColor="White" BackgroundColor="#4e8ef7"/>
+                    </StackLayout>
+
+                    <Image x:Name="image"  IsVisible="false" HorizontalOptions="Start" VerticalOptions="Center"
+                        WidthRequest="140" HeightRequest="160"/>
+
+                </StackLayout>
+                </ScrollView>
+            <Button Text="Salvar" x:Name="save_btn" TextColor="White"
+                        BackgroundColor="#4e8ef7" RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=.90,Constant=0}"
+                    Margin="16,0,16,0"
+                />
+                <ActivityIndicator Color="#4e8ef7" x:Name="progress" IsRunning="false" IsVisible="false" VerticalOptions="End" HorizontalOptions="FillAndExpand" RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=1,Constant=0.50}" />
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
