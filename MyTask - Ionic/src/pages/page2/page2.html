@@ -1,0 +1,60 @@
+<ion-header>
+<ion-navbar color="secondary">
+  <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Nova Tarefa</ion-title>
+</ion-navbar>
+</ion-header>
+
+<ion-content padding >
+<!--<h3>Ionic Menu Starter</h3>
+
+<p>
+  If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+</p>
+
+<button ion-button secondary menuToggle>Toggle Menu</button>-->
+<div id="container">
+<ion-list >
+<form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)">
+<ion-item>
+  <ion-label floating>Titulo</ion-label>
+  <ion-input type="text" type="text" [(ngModel)]="title" name="title"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>Descrição</ion-label>
+  <ion-input type="text" [(ngModel)]="descrition" name="descrition"></ion-input>
+</ion-item>
+
+<ion-item class="hide-on-keyboard-open">
+  <ion-label floating>Data Inicio</ion-label>
+  <ion-input type="text" disabled="true" (focus)="dateInicio()" (click)="dateInicio()"  name="datainicio" [(ngModel)]="datainicio" ></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>Data Fim</ion-label>
+  <ion-input type="text" disabled="true" (focus)="dateFim()" (click)="dateFim()"  name="datafim" [(ngModel)]="datafim" ></ion-input>
+</ion-item>
+
+  <h5>Imagem</h5>
+  <div id="container">
+    <div id="middle" item-right>
+      <input type="button" ion-button (click)="takePicture()" value="Capturar">
+      <input type="button" ion-button (click)="openGallery()" value="Procurar">
+    </div>
+    <img width="140px" height="160px" [src]="base64Image" *ngIf="base64Image" item-left/>
+  </div>
+
+  <div class="div-save">
+    <button class="button" type="submit" block ion-button >Salvar</button>
+  </div>
+
+</form>
+
+</ion-list>
+
+</div>
+
+</ion-content>

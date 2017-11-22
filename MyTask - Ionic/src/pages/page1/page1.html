@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Tarefas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines>
+
+    <ion-item    *ngFor="let item of items" (click)="itemTapped($event, item)">
+
+      <div class="item-content">
+        <ion-card-header >
+            {{item.title}}
+        </ion-card-header>
+        <ion-card-content >
+            <h4><p>Inicio {{item.start_date}}</p></h4>
+            <h4><p>Fim {{item.end_date}}</p></h4>
+        </ion-card-content>
+      </div>
+
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

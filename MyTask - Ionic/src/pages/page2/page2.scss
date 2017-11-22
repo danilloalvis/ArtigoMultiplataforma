@@ -1,0 +1,32 @@
+page-page2 {
+
+
+  .button-save
+  {
+    width:100%;
+    margin: 16px;
+  }
+
+  img{
+    height: auto;
+    width: 140px;
+  }
+
+
+h5 {
+  color: #969696;
+  font-weight: normal;
+}
+
+  #container {
+    width:100%;
+    font-size: 0;
+  }
+
+  #left, #middle, #right {
+    display: inline-block;
+    *display: inline;
+    vertical-align: top;
+  }
+
+}
